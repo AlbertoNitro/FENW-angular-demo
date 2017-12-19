@@ -15,7 +15,7 @@
         <button type="submit" (click)="cancel()">Cancel</button>
     </form>
 </div>
-<h4 *ngIf="items.length == 0"> Lista vacía!!!</h4>
+<h4 *ngIf="items != undefined && items.length == 0"> Lista vacía!!!</h4>
 <ul *ngFor="let item of items">
     <li>
         <input readonly type="number" name="id" [(ngModel)]="item.id">

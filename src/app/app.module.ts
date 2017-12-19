@@ -24,6 +24,7 @@ import { ObserverComponent } from './observer/observer.component';
 import { GithubService } from './api-github/github.service';
 import { ApiItemsComponent } from './api-items/api-items.componet';
 import { ApiItemsService } from './api-items/api-items.service';
+import { CounterObservableComponent } from './counter-observable/counter-observable.component';
 
 
 
@@ -34,7 +35,7 @@ import { ApiItemsService } from './api-items/api-items.service';
   declarations: [
     AppComponent, TypescriptComponent, BindingComponent, SubCompComponent, DirectiveNgComponent,
     CrudComponent, ApiResponseComponent, ApiGithubComponent, ApiItemsComponent, HomeComponent, RouteComponent, NumberComponent,
-    DirectiveMiwComponent, ObserverComponent, PipeComponent
+    DirectiveMiwComponent, ObserverComponent, PipeComponent, CounterObservableComponent
   ],
   bootstrap: [AppComponent],
   providers: [HttpService, GithubService, ApiItemsService]
