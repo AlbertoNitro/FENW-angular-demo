@@ -14,7 +14,7 @@ export class TypescriptComponent {
     // title:string VS public String title
     title = 'Angular 4. Demo'; // Si se inicializa valor, se extrae su tipo
 
-    isDone = false;                                      // boolean
+    isDone = true;                                      // boolean
     integer = 123;                                       // number
     decimal = 6.6;                                       // number
     hex = 0x000f;                                        // number

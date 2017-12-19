@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { OnInit } from '@angular/core';
 
+import { Item } from './item.model';
+
 @Component({
   selector: 'app-crud',
   templateUrl: './crud.component.html'
@@ -40,12 +42,5 @@ export class CrudComponent implements OnInit {
     this.itemEdit.id = this.itemUpdate.id;
     this.itemEdit.name = this.itemUpdate.name;
     this.itemUpdate = new Item(undefined, undefined);
-  }
-}
-
-class Item {
-  constructor(public id: number, public name: string) { }
-  toString() {
-    return '[id:' + this.id + ',name:' + this.name + ']';
   }
 }
