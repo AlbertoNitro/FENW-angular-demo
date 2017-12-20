@@ -24,7 +24,7 @@ import { ObserverComponent } from './observer/observer.component';
 import { GithubService } from './api-github/github.service';
 import { ApiItemsComponent } from './api-items/api-items.componet';
 import { ApiItemsService } from './api-items/api-items.service';
-import { CounterObservableComponent } from './counter-observable/counter-observable.component';
+import { CounterObservableComponent } from './couter-observable/counter-observable-component';
 
 
 

@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
 import { Subject } from 'rxjs/Subject';
-import { Observable } from 'rxjs/Observable';
 
 @Component({
     selector: 'app-counter-observable',
@@ -10,27 +8,30 @@ import { Observable } from 'rxjs/Observable';
                <h3>Observer: {{observer}}</h3>`
 })
 export class CounterObservableComponent implements OnInit {
+
     counter = 0;
 
-    counterSubject: Subject<number> = new Subject();
+    counterObservable: Subject<number> = new Subject();
 
     observer: number;
 
     ngOnInit(): void {
-        this.counterSubject.asObservable().subscribe(
+        this.counterObservable.asObservable().subscribe(
             value => this.observer = value,
-            error => alert(error),
-            () => alert('Counter complete!!!')
+            error => alert('error: ' + error),
+            () => alert('Completado')
         );
     }
-
-
     increase() {
         this.counter++;
         if (this.counter > 9) {
-            this.counterSubject.complete();
+            this.counterObservable.complete();
         } else {
-            this.counterSubject.next(this.counter);
+            this.counterObservable.next(this.counter);
         }
     }
+
+
+
+
 }
