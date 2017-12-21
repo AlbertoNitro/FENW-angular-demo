@@ -7,7 +7,7 @@ import { HttpService } from './core/http.service';
 import { CoreModule } from './core/core.module';
 import { NumberComponent } from './core/number/number.component';
 
-import { route } from './app-route.module';
+import { AppRouteModule } from './app-route.module';
 import { AppComponent } from './app.component';
 import { TypescriptComponent } from './typescript/typescript.component';
 import { BindingComponent } from './binding/binding.component';
@@ -30,7 +30,7 @@ import { CounterObservableComponent } from './couter-observable/counter-observab
 
 @NgModule({
   imports: [
-    BrowserModule, FormsModule, HttpModule, CoreModule, route
+    BrowserModule, FormsModule, HttpModule, CoreModule, AppRouteModule
   ],
   declarations: [
     AppComponent, TypescriptComponent, BindingComponent, SubCompComponent, DirectiveNgComponent,
