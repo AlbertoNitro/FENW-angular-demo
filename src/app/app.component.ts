@@ -13,10 +13,6 @@ export class AppComponent implements OnInit {
   // Number
   value = '';
 
-  processEvent(event: string) {
-    alert(event);
-  }
-
   ngOnInit(): void {
     // Se inicializa
   }

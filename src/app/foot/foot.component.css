@@ -1,0 +1,7 @@
+.container {
+    display: flex;
+    flex-direction: column; /* row | row-reverse | column | column-reverse */
+    flex-wrap: wrap; /* nowrap | wrap | wrap-reverse */
+    justify-content: flex-start ; /* flex-start | flex-end | center | space-between | space-around | space-evenly */
+    align-items: flex-start; /* stretch | flex-start | flex-end | center | baseline  */
+  }

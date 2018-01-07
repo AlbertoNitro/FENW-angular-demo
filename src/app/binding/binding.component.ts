@@ -6,13 +6,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BindingComponent {
     title = 'Angular. Demo';
-    getValue(): string {
-        return 'valor';
+    buttonName = 'Mouse event';
+    getValue(): number {
+        return 666;
     }
     event(title: string) {
         this.title = title;
     }
     event2(msg: any) {
-        alert(msg);
+        this.buttonName = `mouse event --> x: ${msg.x}, y: ${msg.y}`;
     }
 }

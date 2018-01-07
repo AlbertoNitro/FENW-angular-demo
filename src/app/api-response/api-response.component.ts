@@ -3,7 +3,8 @@ import { Http } from '@angular/http';
 
 @Component({
     selector: 'app-api-response',
-    template: `<button (click)="search()">Search</button>(https://api.github.com/repositories/113993319)
+    template: `<h2>API Response</h2>
+               <button (click)="search()">Search</button>(https://api.github.com/repositories/113993319)
                <p>status: {{status}}</p>
                <p>statusText: {{statusText}}</p>
                <p>json: {{json}}</p>

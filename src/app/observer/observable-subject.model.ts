@@ -5,7 +5,7 @@ import 'rxjs/add/observable/timer';
 
 export class ObservableSubject {
     private subject: Subject<String> = new Subject();
- 
+
     constructor() {
         const timer = Observable.timer(1000, 1000);
         const subscription: Subscription = timer.subscribe(t => {

@@ -1,19 +1,15 @@
 import { Component } from '@angular/core';
-import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
-  template: `<h1>Routing</h1>
-             <h3>Id: {{id}}</h3>
-             <p><button (click)='back()'>back</button></p>`
+  template: `
+    <h2>Routing</h2>
+    <h3>Cabecera, menus...<h3>
+    <ul>
+      <li><a [routerLink]="['route1']">Route 1</a></li>
+      <li><a [routerLink]="['route2', 666]">Route 2:666</a></li>
+    </ul>
+    <router-outlet></router-outlet>
+    <h3>pie...<h3>
+  `
 })
-export class RouteComponent {
-  id: number;
-  constructor(private router: Router, activatedRoute: ActivatedRoute) {
-    this.id = activatedRoute.snapshot.params['id'];
-  }
-
-  back() {
-    this.router.navigate(['/home']);
-  }
-}
-
+export class RouteComponent { }
