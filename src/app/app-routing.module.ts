@@ -1,10 +1,13 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { HomeComponent } from './home/home.component';
 import { TypescriptComponent } from './typescript/typescript.component';
 import { BindingComponent } from './binding/binding.component';
 import { SubComponentsComponent } from './sub-components/sub-components.component';
+import { BasicComponent } from './sub-components/basic.component';
+import { NumberComponent } from './sub-components/number.component';
 import { DirectiveNgComponent } from './directive-ng/directive-ng.component';
 import { CrudComponent } from './crud/crud.component';
 import { RouteComponent } from './route/route.component';
@@ -16,7 +19,7 @@ import { CounterObservableComponent } from './couter-observable/counter-observab
 import { ApiResponseComponent } from './api-response/api-response.component';
 import { ApiGithubComponent } from './api-github/api-github.component';
 import { ApiItemsComponent } from './api-items/api-items.componet';
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { SubModulesComponent } from './sub-modules/sub-modules.component';
 
 const appRoutes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: '/home' },
@@ -27,7 +30,7 @@ const appRoutes: Routes = [
   { path: 'directive-ng', component: DirectiveNgComponent },
   { path: 'crud', component: CrudComponent },
   {
-    path: 'routing', component: RouteComponent ,
+    path: 'routing', component: RouteComponent,
 
     children: [
       { path: '', redirectTo: 'route1', pathMatch: 'full' },
@@ -41,11 +44,18 @@ const appRoutes: Routes = [
   { path: 'api-response', component: ApiResponseComponent },
   { path: 'api-github', component: ApiGithubComponent },
   { path: 'api-items', component: ApiItemsComponent },
-  { path: '**', component: PageNotFoundComponent  }
+  { path: 'sub-modules', loadChildren: 'app/sub-modules/sub-modules.module#SubModulesModule' },
+  { path: '**', component: PageNotFoundComponent }
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(appRoutes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {
+  static components = [PageNotFoundComponent, HomeComponent, TypescriptComponent, BindingComponent,
+    SubComponentsComponent, BasicComponent, NumberComponent, DirectiveNgComponent, CrudComponent,
+    RouteComponent, Route1Component, Route2Component, PipeComponent, ObserverComponent, CounterObservableComponent,
+    ApiResponseComponent, ApiGithubComponent, ApiItemsComponent];
+}
+

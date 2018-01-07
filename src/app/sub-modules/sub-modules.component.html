@@ -1,0 +1,13 @@
+<h2>Sub-modulos</h2>
+<h3>Título: {{title}}
+    <span *ngIf="isEmpty()"> Sin Título!!!</span>
+</h3>
+<p>Cambiar título:
+    <input type="text" [(ngModel)]="title">
+</p>
+<nav>
+    <a routerLink="one">Uno</a>
+    <a routerLink="two">Dos</a>
+</nav>
+
+<router-outlet></router-outlet>
