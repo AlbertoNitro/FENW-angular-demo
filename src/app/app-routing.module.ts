@@ -15,7 +15,7 @@ import { Route1Component } from './route/route1.component';
 import { Route2Component } from './route/route2.component';
 import { PipeComponent } from './pipe/pipe.component';
 import { ObserverComponent } from './observer/observer.component';
-import { CounterObservableComponent } from './couter-observable/counter-observable-component';
+import { CounterObservableComponent } from './counter-observable/counter-observable-component';
 import { ApiResponseComponent } from './api-response/api-response.component';
 import { ApiGithubComponent } from './api-github/api-github.component';
 import { ApiItemsComponent } from './api-items/api-items.componet';

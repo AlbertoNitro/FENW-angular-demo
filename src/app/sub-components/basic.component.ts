@@ -1,11 +1,10 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 
-
 @Component({
   selector: 'app-basic',
   template: `<h3>sub-component: basic</h3>
              <p>{{basicProperty}}</p>
-             <p><button (click)='event($event)'>event</button>`
+             <p><button (click)='onClick($event)'>onClick</button>`
 })
 export class BasicComponent {
 
@@ -13,8 +12,9 @@ export class BasicComponent {
 
   @Output() basicEvent = new EventEmitter<any>();
 
-  event(msg) {
+  onClick(msg) {
     this.basicEvent.emit(msg);
     // this.basicEvent.emit('value');
+    // this.basicEvent.emit();
   }
 }
