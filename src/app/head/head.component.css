@@ -6,8 +6,6 @@
     justify-content: space-around; /* flex-start | flex-end | center | space-between | space-around | space-evenly */
     align-items: center; /* stretch | flex-start | flex-end | center | baseline  */
   }
-  .navigation {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-  }
+a {
+    margin-left: 10px;
+}
