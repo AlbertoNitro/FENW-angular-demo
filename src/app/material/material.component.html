@@ -1,0 +1,55 @@
+<mat-toolbar color="primary" class="container">
+    <img src="../../assets/img/miw.png" />
+    <span>Angular Material & Angular Flex Layout</span>
+    <button mat-icon-button [matMenuTriggerFor]="menu">
+        <mat-icon>more_vert</mat-icon>
+    </button>
+</mat-toolbar>
+<mat-menu x-position="before" #menu="matMenu">
+    <button mat-menu-item routerLink="home">
+        <mat-icon>home</mat-icon>
+        <span>Home</span>
+    </button>
+    <button mat-menu-item routerLink="create-person">
+        <mat-icon>person_add</mat-icon>
+        <span>Create Person</span>
+    </button>
+    <button mat-menu-item>
+        <mat-icon>shopping_cart</mat-icon>
+        <span>Shopping Cart</span>
+    </button>
+    <button mat-menu-item>
+        <mat-icon>add_shopping_cart</mat-icon>
+        <span>Add shopping Cart</span>
+    </button>
+    <button mat-menu-item>
+        <mat-icon>remove_shopping_cart</mat-icon>
+        <span>Remove Shopping Cart</span>
+    </button>
+    <button mat-menu-item disabled>
+        <mat-icon>local_shipping</mat-icon>
+        <span>Order tracking</span>
+    </button>
+    <button mat-menu-item>
+        <mat-icon>exit_to_app</mat-icon>
+        <span>Logout</span>
+    </button>
+    <button mat-menu-item>
+        <mat-icon>person</mat-icon>
+        <span>Person</span>
+    </button>
+    <button mat-menu-item>
+        <mat-icon>build</mat-icon>
+        <span>Admin</span>
+    </button>
+    <button mat-menu-item>
+        <mat-icon>settings</mat-icon>
+        <span>Settings</span>
+    </button>
+</mat-menu>
+<router-outlet></router-outlet>
+<mat-toolbar color="primary">
+    <div layout="row" layout-align="center center" flex>
+        &copy; Universidad Politécnica de Madrid. Máster en Ingeniería Web. FENW: Angular
+    </div>
+</mat-toolbar>
