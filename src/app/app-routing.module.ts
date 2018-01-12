@@ -19,7 +19,6 @@ import { CounterObservableComponent } from './counter-observable/counter-observa
 import { ApiResponseComponent } from './api-response/api-response.component';
 import { ApiGithubComponent } from './api-github/api-github.component';
 import { ApiItemsComponent } from './api-items/api-items.componet';
-import { SubModulesComponent } from './sub-modules/sub-modules.component';
 
 const appRoutes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: '/home' },

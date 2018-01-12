@@ -6,14 +6,5 @@ import { Employee } from './shared/employee.model';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit {
+export class AppComponent { }
 
-  // sub-comp
-  title = 'Angular. Demo';
-  // Number
-  value = '';
-
-  ngOnInit(): void {
-    // Se inicializa
-  }
-}
