@@ -10,10 +10,9 @@ import { CommonModule } from '@angular/common';
         CommonModule,
         FormsModule,
         ReactiveFormsModule,
-            MaterialRoutingModule
+        MaterialRoutingModule
     ],
-    declarations: [
-        MaterialRoutingModule.components
-    ]
+    entryComponents: [MaterialRoutingModule.factoryComponents],
+    declarations: [MaterialRoutingModule.components]
 })
 export class MaterialModule { }

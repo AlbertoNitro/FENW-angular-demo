@@ -21,6 +21,7 @@ import { MaterialComponent } from './material.component';
 import { HomeComponent } from './home.component';
 import { CreatePersonComponent } from './create-person.component';
 import { PersonComponent } from './person.component';
+import { CreatePersonDialogComponent } from './create-person-dialog.component';
 
 const routes: Routes = [
     {
@@ -29,8 +30,7 @@ const routes: Routes = [
             { path: '', redirectTo: 'home', pathMatch: 'full' },
             { path: 'home', component: HomeComponent },
             { path: 'create-person', component: CreatePersonComponent },
-            { path: 'flex-create-person', component: PersonComponent },
-            { path: 'dialog-create-person', component: CreatePersonComponent }
+            { path: 'flex-create-person', component: PersonComponent }
         ]
     }
 ];
@@ -79,6 +79,10 @@ export class MaterialRoutingModule {
         MaterialComponent,
         HomeComponent,
         CreatePersonComponent,
-        PersonComponent
+        PersonComponent,
+        CreatePersonDialogComponent
+    ];
+    static factoryComponents = [
+        CreatePersonDialogComponent
     ];
 }

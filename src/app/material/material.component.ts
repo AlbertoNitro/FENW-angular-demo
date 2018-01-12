@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { MatDialog } from '@angular/material';
+
+import { CreatePersonDialogComponent } from './create-person-dialog.component';
 
 @Component({
   selector: 'app-material',
@@ -6,4 +9,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./material.component.css']
 
 })
-export class MaterialComponent { }
+export class MaterialComponent {
+  constructor(public dialog: MatDialog) { }
+  openDialog() {
+    const dialogRef = this.dialog.open(CreatePersonDialogComponent, {
+      width: '300px'
+    });
+  }
+
+}
