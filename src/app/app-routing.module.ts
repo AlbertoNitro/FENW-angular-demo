@@ -44,8 +44,8 @@ const appRoutes: Routes = [
   { path: 'api-response', component: ApiResponseComponent },
   { path: 'api-github', component: ApiGithubComponent },
   { path: 'api-items', component: ApiItemsComponent },
-  { path: 'sub-modules', loadChildren: 'app/sub-modules/sub-modules.module#SubModulesModule' },
-  { path: 'material', loadChildren: 'app/material/material.module#MaterialModule' },
+  { path: 'sub-modules', loadChildren: 'app/sub-modules-module/sub-modules.module#SubModulesModule' },
+  { path: 'material', loadChildren: 'app/material-module/material.module#MaterialModule' },
   { path: '**', component: PageNotFoundComponent }
 ];
 
