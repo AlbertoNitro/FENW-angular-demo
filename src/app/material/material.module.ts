@@ -1,13 +1,16 @@
 import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-import { FormsModule } from '@angular/forms';
 import { MaterialRoutingModule } from './material-routing.module';
+import { CommonModule } from '@angular/common';
 
 
 @NgModule({
     imports: [
+        CommonModule,
         FormsModule,
-        MaterialRoutingModule
+        ReactiveFormsModule,
+            MaterialRoutingModule
     ],
     declarations: [
         MaterialRoutingModule.components

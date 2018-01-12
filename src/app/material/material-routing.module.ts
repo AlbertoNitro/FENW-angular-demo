@@ -20,6 +20,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { MaterialComponent } from './material.component';
 import { HomeComponent } from './home.component';
 import { CreatePersonComponent } from './create-person.component';
+import { PersonComponent } from './person.component';
 
 const routes: Routes = [
     {
@@ -27,9 +28,10 @@ const routes: Routes = [
         children: [
             { path: '', redirectTo: 'home', pathMatch: 'full' },
             { path: 'home', component: HomeComponent },
-            { path: 'create-person', component: CreatePersonComponent }
+            { path: 'create-person', component: CreatePersonComponent },
+            { path: 'flex-create-person', component: PersonComponent },
+            { path: 'dialog-create-person', component: CreatePersonComponent }
         ]
-
     }
 ];
 
@@ -76,6 +78,7 @@ export class MaterialRoutingModule {
     static components = [
         MaterialComponent,
         HomeComponent,
-        CreatePersonComponent
+        CreatePersonComponent,
+        PersonComponent
     ];
 }
